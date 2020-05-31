@@ -11,5 +11,9 @@ uniform samplerCube Skybox;
 
 void main()
 {
+	frag_ambient = vec4(texture(Skybox, vert_world_position).rgb, 1.0);
+	frag_position = vec3(0.0, 0.0, 0.0);
+	frag_mra = vec3(0.0, 0.0, 0.0);
+	frag_normal = normalize(vert_world_position);
 
 }
